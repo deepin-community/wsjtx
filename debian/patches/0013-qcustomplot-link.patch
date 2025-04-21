@@ -1,0 +1,38 @@
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -696,17 +696,12 @@
+   UDPExamples/qss/default.qss
+   )
+ 
+-set (qcp_CXXSRCS
+-  qcustomplot-source/qcustomplot.cpp
+-  )
+-
+ set (all_CXXSRCS
+   ${wsjt_CXXSRCS}
+   ${fort_qt_CXXSRCS}
+   ${wsjt_qt_CXXSRCS}
+   ${wsjt_qtmm_CXXSRCS}
+   ${wsjtx_CXXSRCS}
+-  ${qcp_CXXSRCS}
+   )
+ 
+ set (all_C_and_CXXSRCS
+@@ -1362,16 +1357,11 @@
+ # targets dependent on Qt
+ #
+ 
+-# build a library for the QCustomPlot widget
+-add_library (qcp STATIC ${qcp_CXXSRCS})
+-target_include_directories (qcp PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/qcustomplot-source>)
+-target_link_libraries (qcp Qt5::Widgets Qt5::PrintSupport)
+-
+ # build a library of package Qt functionality
+ add_library (wsjt_qt STATIC ${wsjt_qt_CXXSRCS} ${wsjt_qt_GENUISRCS} ${GENAXSRCS})
+ # set wsjtx_udp exports to static variants
+ target_compile_definitions (wsjt_qt PUBLIC UDP_STATIC_DEFINE)
+-target_link_libraries (wsjt_qt Hamlib::Hamlib Boost::log qcp Qt5::Widgets Qt5::Network Qt5::Sql)
++target_link_libraries (wsjt_qt Hamlib::Hamlib Boost::log QCustomPlot Qt5::Widgets Qt5::Network Qt5::Sql)
+ if (WIN32)
+   target_link_libraries (wsjt_qt Qt5::AxContainer Qt5::AxBase)
+ endif (WIN32)

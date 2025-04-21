@@ -1,0 +1,26 @@
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -1650,22 +1650,7 @@
+ 
+ 
+ # creates or updates ${PROJECT_BINARY_DIR}/scs_version.h using cmake script
+-add_custom_target (revisiontag
+-  COMMAND ${CMAKE_COMMAND}
+-  -D SOURCE_DIR=${CMAKE_CURRENT_SOURCE_DIR}
+-  -D BINARY_DIR=${CMAKE_CURRENT_BINARY_DIR}
+-  -D OUTPUT_DIR=${PROJECT_BINARY_DIR}
+-  -P ${CMAKE_CURRENT_SOURCE_DIR}/CMake/getsvn.cmake
+-  VERBATIM
+-  BYPRODUCTS scs_version.h
+-  COMMENT "Getting source control system revision information"
+-  )
+-# explicitly say that the wsjt_qt depends on custom target, this is
+-# done indirectly so that the revisiontag target gets built exactly
+-# once per build
+-add_dependencies (wsjt_qt revisiontag)
+-add_dependencies (jt9 revisiontag)
+-add_dependencies (wsprd revisiontag)
++file (WRITE "${PROJECT_BINARY_DIR}/scs_version.h" "#define SCS_VERSION_STR\n")
+ 
+ 
+ #

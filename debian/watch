@@ -1,0 +1,20 @@
+# Use version 3 so uupdate.sh is passed the tarball name.
+#
+# Specify no-symlink so uscan doesn't try to invoke mk-origtargz to repack
+# the upstream tarball; debian/uupdate.sh will handle this, because upstream
+# ships their sources tarball within the download tarball.
+#
+# The sf.net redirector (see https://wiki.debian.org/debian/watch#SourceForge)
+# finds both "wsjtx-${version}.tgz" AND "wsjtx-${version}/wsjtx-${version}.tgz"
+# The first uversionmangle rule avoids a greedy regex match returning a version
+# like "wsjtx-${version}/wsjtx-${version}".  The second maps '-' to '~'.
+# Examples returns from the sf.net redirector.
+#
+#   https://qa.debian.org/watch/sf.php/wsjt/wsjtx-2.7.0-rc2.tgz (2.7.0~rc2) index=2.7.0~rc2-0
+#   https://qa.debian.org/watch/sf.php/wsjt/wsjtx-2.7.0-rc2.tgz (2.7.0~rc2) index=2.7.0~rc2-0
+#   https://qa.debian.org/watch/sf.php/wsjt/wsjtx-2.7.0-rc2/wsjtx-2.7.0-rc2.tgz (2.7.0~rc2) index=2.7.0~rc2-0
+#   https://qa.debian.org/watch/sf.php/wsjt/wsjtx-2.7.0-rc2/wsjtx-2.7.0-rc2.tgz (2.7.0~rc2) index=2.7.0~rc2-0
+
+version=3
+opts="uversionmangle=s/.*\/wsjtx-//;s/-rc/~rc/,dversionmangle=s/\+repack//,repacksuffix=+repack,no-symlink" \
+http://sf.net/wsjt/wsjtx-(.*?)\.tgz debian debian/uupdate.sh

@@ -1,0 +1,9 @@
+Document: wsjtx
+Title: WSJT-X Manual
+Author: Joseph H Taylor, Jr, K1JT
+Abstract: This is the user guide for WSJT-X
+Section: Amateur Radio
+
+Format: HTML
+Index: /usr/share/doc/wsjtx/wsjtx-main.html
+Files: /usr/share/doc/wsjtx/*.html

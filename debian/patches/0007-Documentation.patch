@@ -1,0 +1,43 @@
+Description: Little bits for lintian cleanliness and
+ splitting the examples and doc.
+Author: hibby <d@vehibberd.com>
+Last-Update: 2018-03-27
+
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -1610,17 +1610,6 @@
+ endif(WSJT_BUILD_UTILS)  
+ 
+ install (FILES
+-  README
+-  COPYING
+-  AUTHORS
+-  THANKS
+-  NEWS
+-  BUGS
+-  DESTINATION ${CMAKE_INSTALL_DOCDIR}
+-  #COMPONENT runtime
+-  )
+-
+-install (FILES
+   cty.dat
+   cty.dat_copyright.txt
+   contrib/Ephemeris/JPLEPH
+--- a/doc/CMakeLists.txt
++++ b/doc/CMakeLists.txt
+@@ -248,7 +248,7 @@
+   string (REGEX REPLACE "_en$" "" _nwe ${_nwe})
+   install (FILES
+     ${_html}
+-    DESTINATION ${CMAKE_INSTALL_DOCDIR}
++    DESTINATION share/doc/wsjtx/
+     RENAME ${_nwe}-${wsjtx_VERSION}${_ext}
+     #COMPONENT runtime
+     )
+--- a/wsjtx.desktop
++++ b/wsjtx.desktop
+@@ -9,3 +9,4 @@
+ Type=Application
+ Categories=AudioVideo;Audio;HamRadio;
+ StartupNotify=true
++Keywords=Radio
