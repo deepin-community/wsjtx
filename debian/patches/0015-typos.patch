@@ -1,0 +1,13 @@
+Description: patch spelling typo(s) in source
+
+--- a/manpages/man1/fst4sim.1.txt
++++ b/manpages/man1/fst4sim.1.txt
+@@ -64,7 +64,7 @@ QRA64 sub-mode designator.
+ 
+ *snr*::
+ 
+- Add Guassian noise to simulate SNR in 2500 Hz bandwidth.
++ Add Gaussian noise to simulate SNR in 2500 Hz bandwidth.
+ 
+ *W*::
+ 

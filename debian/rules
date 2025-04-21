@@ -1,4 +1,31 @@
 #!/usr/bin/make -f
 
+# This ensures that cmake uses debian's version of hamlib
+export PKG_CONFIG_ALLOW_SYSTEM_LIBS=1
+# Belt and Braces
+export WSJT_SKIP_MANPAGES=1
+# Debian Hardening
+export DEB_BUILD_MAINT_OPTIONS=hardening=+all
+
+DPKG_EXPORT_BUILDFLAGS := true
+include /usr/share/dpkg/buildflags.mk
+
 %:
 	dh $@
+
+override_dh_auto_configure:
+	# look for documentation in /usr/share/doc/wsjtx instead of .../WSJT-X
+	dh_auto_configure -- -DCMAKE_INSTALL_DOCDIR=share/doc/wsjtx
+
+override_dh_installchangelogs:
+	# there are various files with upstream notes, NEWS is the most comprehensive one
+	dh_installchangelogs NEWS
+
+override_dh_installdocs-indep:
+	dh_installdocs --indep
+	# Fix font-awesome from cloudflare
+	sed -i -e 's/https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/font-awesome\/4.7.0\/css\/font-awesome.min.css/\/usr\/share\/fonts-font-awesome\/css\/font-awesome.min.css/g' \
+		debian/wsjtx-doc/usr/share/doc/wsjtx/wsjtx-main-*.html \
+		debian/tmp/usr/share/doc/wsjtx/wsjtx-main-*.html
+	# Create non-version-dependant filename
+	cd debian/wsjtx-doc/usr/share/doc/wsjtx && ln -s wsjtx-main-*.html wsjtx-main.html

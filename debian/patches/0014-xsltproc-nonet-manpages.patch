@@ -1,0 +1,16 @@
+Description: Pass --nonet option to xlstproc for manpages
+Debian-Bug: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=964208
+Author: tony mancill <tmancill@debian.org>
+Last-Update: 2020-07-05
+
+--- a/manpages/CMakeLists.txt
++++ b/manpages/CMakeLists.txt
+@@ -33,7 +33,7 @@ find_program (GZIP_EXECUTABLE NAMES gzip
+ find_program (SED_EXECUTABLE NAMES sed)
+ 
+ set (XSLTPROC_OPTS 
+-  "-param man.endnotes.list.enabled 0 -param man.endnotes.are.numbered 0"
++  "--nonet -param man.endnotes.list.enabled 0 -param man.endnotes.are.numbered 0"
+   )
+ set (A2X_OPTS
+   --format=manpage

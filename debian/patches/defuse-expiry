@@ -1,0 +1,15 @@
+--- a/widgets/mainwindow.cpp
++++ b/widgets/mainwindow.cpp
+@@ -1080,10 +1080,12 @@ MainWindow::MainWindow(QDir const& temp_
+   splashTimer.setSingleShot (true);
+   splashTimer.start (20 * 1000);
+ 
++  /*
+   if(QCoreApplication::applicationVersion().contains("-devel") or
+      QCoreApplication::applicationVersion().contains("-rc")) {
+     QTimer::singleShot (0, this, SLOT (not_GA_warning_message ()));
+   }
++  */
+ 
+   m_specOp=m_config.special_op_id();
+ 

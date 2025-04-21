@@ -1,0 +1,15 @@
+Description: Remove link to google fonts
+ Asciidoctor generates by default a stylesheet with google fonts link.
+Author: Enrico Rossi <e.rossi@tecnobrain.com>
+Last-Update: 2018-08-22
+
+--- a/doc/user_guide/en/wsjtx-main.adoc
++++ b/doc/user_guide/en/wsjtx-main.adoc
+@@ -13,6 +13,7 @@ Joseph H Taylor, Jr, K1JT
+ :keywords: amateur radio weak signal communication K1JT WSJT JT65 JT9
+ :description: Software for Amateur Radio Weak-Signal Communication
+ :prog: WSJT-X
++:!webfonts:
+ 
+ // use global link file
+ include::../../common/links.adoc[]

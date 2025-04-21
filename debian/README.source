@@ -1,0 +1,17 @@
+wsjtx for Debian
+----------------
+
+   Source came from https://sourceforge.net/projects/wsjt/
+   The tarball is actually tar-in-tar and needs to be unwrapped to be useful.
+
+   Steps to update the repository to a new upstream version:
+
+   * cd repodir
+   * uscan # debian/uupdate.sh will do the heavy lifting here
+   * version=2.7.0~rc6
+   * gbp import-orig --pristine-tar ../wsjtx_$version+dfsg.orig.tar.xz
+   * dch -v $version+dfsg-1 "New upstream version."
+
+Unless listed below, manpages in the debian/ folder are from the upstream
+tarball:
+	- jt9.1 (Dave Hibberd <d@vehibberd.com>)

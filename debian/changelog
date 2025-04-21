@@ -1,5 +1,462 @@
-template-repository (1.0-1) unstable; urgency=medium
+wsjtx (2.7.0+repack-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream version 2.7.0+repack.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Christoph Berg <myon@debian.org>  Tue, 18 Feb 2025 16:06:08 +0100
+
+wsjtx (2.7.0~rc8+repack-1) unstable; urgency=medium
+
+  * New upstream version 2.7.0~rc8+repack.
+  * Remove CR from all patches, upstream switched.
+
+ -- Christoph Berg <myon@debian.org>  Thu, 09 Jan 2025 22:12:12 +0100
+
+wsjtx (2.7.0~rc7+repack-1) unstable; urgency=medium
+
+  * New upstream version 2.7.0~rc7+repack.
+  * Include superfox functionality, it is open source now. Yay!
+  * Collect new licenses in copyright file.
+
+ -- Christoph Berg <myon@debian.org>  Mon, 30 Sep 2024 22:36:16 +0200
+
+wsjtx (2.7.0~rc6+dfsg-1) unstable; urgency=medium
+
+  * New upstream version 2.7.0~rc6+dfsg.
+  * Remove lib/superfox from orig tarball; these closed-source binaries for
+    superfox operation must be obtained separately. (Other modes are
+    unaffected.) See README.Debian for details.
+
+ -- Christoph Berg <myon@debian.org>  Sat, 20 Jul 2024 11:44:53 +0200
+
+wsjtx (2.7.0~rc4+repack-1) unstable; urgency=medium
+
+  * New upstream version 2.7.0~rc4+repack
+    (https://wsjt.sourceforge.io/wsjtx-doc/Release_Notes_2.7.0-rc4.txt)
+  * Refresh patches
+  * Freshen my email address
+  * Bump standards to 4.7.0 (no changes) 
+
+ -- Dave Hibberd <hibby@debian.org>  Sat, 27 Apr 2024 12:49:18 +0100
+
+wsjtx (2.7.0~rc3+repack-1) unstable; urgency=medium
+
+  * New upstream version 2.7.0~rc3+repack
+    (https://wsjt.sourceforge.io/wsjtx-doc/Release_Notes_2.7.0-rc3.txt)
+  * Refresh patches
+
+ -- tony mancill <tmancill@debian.org>  Mon, 01 Jan 2024 12:05:42 -0800
+
+wsjtx (2.7.0~rc2+repack-2) unstable; urgency=medium
+
+  * Upload 2.7.0~rc2 to unstable (Closes: #1051182)
+  * Update debian/gbp.conf for debian/latest
+
+ -- tony mancill <tmancill@debian.org>  Sat, 16 Sep 2023 11:24:29 -0700
+
+wsjtx (2.7.0~rc2+repack-1) experimental; urgency=medium
+
+  * New upstream version 2.7.0~rc2+repack
+  * Update debian/watch to use sf redirector
+  * Update debian/uupdate.sh to no longer run gbp import-orig
+  * Refresh patches for upstream 2.7.0~rc2
+  * Add debian/gbp.conf for (partial) DEP-14 layout
+  * Freshen years in debian/copyright
+  * Bump Standards-Version to 4.6.2 (no changes)
+
+ -- tony mancill <tmancill@debian.org>  Sun, 03 Sep 2023 20:53:54 -0700
+
+wsjtx (2.6.1+repack-1) unstable; urgency=medium
+
+  * New upstream version 2.6.1+repack.
+
+ -- Christoph Berg <myon@debian.org>  Mon, 16 Jan 2023 19:08:45 +0100
+
+wsjtx (2.6.0+repack-1) unstable; urgency=medium
+
+  * New upstream version 2.6.0+repack.
+  * Install all utility programs: encode77 ft4code ft4sim_mult ft8sim jt49sim
+    jt4sim jt65sim ldpcsim240_101 ldpcsim240_74 msk144sim q65_ftn_test
+    record_time_signal rtty_spec sumsim test_q65 test_snr wsprcode wsprsim.
+    (Closes: #1024761)
+
+ -- Christoph Berg <myon@debian.org>  Sun, 08 Jan 2023 21:39:29 +0100
+
+wsjtx (2.6.0~rc5+repack-1) unstable; urgency=medium
+
+  * New upstream version 2.6.0~rc5+repack.
+
+ -- Christoph Berg <myon@debian.org>  Mon, 05 Dec 2022 12:01:39 +0100
+
+wsjtx (2.6.0~rc4+repack-2) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since buster (oldstable):
+    + wsjtx-data: Drop versioned constraint on wsjtx in Conflicts.
+    + wsjtx-data: Drop versioned constraint on wsjtx in Replaces.
+
+  [ Christoph Berg ]
+  * Build against qcustomplot 2.1.0. (Closes: #1024104)
+  * Defuse "this version will expire" message popup.
+
+ -- Christoph Berg <myon@debian.org>  Wed, 23 Nov 2022 11:11:26 +0100
+
+wsjtx (2.6.0~rc4+repack-1) unstable; urgency=medium
+
+  * New upstream version 2.6.0~rc4+repack.
+
+ -- Christoph Berg <myon@debian.org>  Sat, 17 Sep 2022 12:54:49 +0200
+
+wsjtx (2.6.0~rc3+repack-1) unstable; urgency=medium
+
+  * New upstream version 2.6.0~rc3+repack.
+
+ -- Christoph Berg <myon@debian.org>  Tue, 23 Aug 2022 10:24:06 +0200
+
+wsjtx (2.6.0~rc2+repack-1) unstable; urgency=medium
+
+  * New upstream version 2.6.0~rc2+repack.
+
+ -- Christoph Berg <myon@debian.org>  Mon, 08 Aug 2022 23:20:00 +0200
+
+wsjtx (2.5.4+repack-1) unstable; urgency=medium
+
+  * New upstream version 2.5.4+repack
+
+ -- tony mancill <tmancill@debian.org>  Tue, 04 Jan 2022 16:24:25 -0800
+
+wsjtx (2.5.2+repack-1) unstable; urgency=medium
+
+  * New upstream version 2.5.2+repack (Closes: #998649)
+  * Exclude all .exe and .dll files from upstream tarball
+
+ -- tony mancill <tmancill@debian.org>  Fri, 05 Nov 2021 07:40:30 -0700
+
+wsjtx (2.5.1+repack-1) unstable; urgency=medium
+
+  * New upstream version 2.5.1+repack
+  * Update debian/watch and debian/uupdate.sh
+  * Refresh patches for upstream release; remove patch for #995376
+  * Add myself to Uploaders.
+
+ -- tony mancill <tmancill@debian.org>  Sat, 30 Oct 2021 11:19:09 -0700
+
+wsjtx (2.5.0+repack-3) unstable; urgency=medium
+
+  * Team upload.
+  * Add patch for segfault when refspec is used (Closes: #995376)
+
+ -- tony mancill <tmancill@debian.org>  Sun, 24 Oct 2021 17:51:22 -0700
+
+wsjtx (2.5.0+repack-2) unstable; urgency=medium
+
+  * Team upload.
+  * Rebuild against current unstable build-deps (see Debian #995198)
+  * Bump Standards-Version to 4.6.0 (no changes)
+
+ -- tony mancill <tmancill@debian.org>  Fri, 22 Oct 2021 19:54:11 -0700
+
+wsjtx (2.5.0+repack-1) unstable; urgency=high
+
+  * New upstream version 2.5.0+repack.
+  * Urgency high since rc6's built-in EOL timer expires on Sep 30.
+  * Precompiled windows binaries are gone, remove Files-Excluded again.
+
+ -- Christoph Berg <myon@debian.org>  Tue, 28 Sep 2021 10:30:14 +0200
+
+wsjtx (2.5.0~rc6+repack-1) unstable; urgency=medium
+
+  * New upstream version 2.5.0~rc6+repack.
+  * Remove precompiled windows binaries from map65 subdirectory.
+  * Update copyright for map65 subdirectory (we don't use it yet, tho).
+
+ -- Christoph Berg <myon@debian.org>  Thu, 09 Sep 2021 22:56:32 +0200
+
+wsjtx (2.4.0+repack-1) experimental; urgency=medium
+
+  * New upstream version 2.4.0+repack.
+  * Drop debian/patches/c-locale, obsoleted upstream.
+
+ -- Christoph Berg <myon@debian.org>  Mon, 24 May 2021 21:56:21 +0200
+
+wsjtx (2.4.0~rc4+repack-1) experimental; urgency=medium
+
+  * New upstream version 2.4.0~rc4+repack.
+  * Patch logging to require C.UTF-8 instead of en_US.UTF-8. (Closes: #982287)
+  * Add dependency on libqt5sql5-sqlite.
+  * Move hamradio-files dependency to wsjtx-data. (Closes: #985869)
+
+ -- Christoph Berg <myon@debian.org>  Sat, 27 Mar 2021 10:24:51 +0100
+
+wsjtx (2.4.0~rc1+repack-1) experimental; urgency=medium
+
+  * New upstream version 2.4.0~rc1+repack with new Q65 mode.
+  * Bump hamlib B-D to 4.1.
+  * Provide a debian/uupdate.sh script to extract the upstream tarball
+    and use it in debian/watch.
+
+ -- Christoph Berg <myon@debian.org>  Wed, 03 Feb 2021 22:55:29 +0100
+
+wsjtx (2.3.0+repack-1) unstable; urgency=medium
+
+  * New upstream version 2.3.0+repack.
+
+ -- Christoph Berg <myon@debian.org>  Mon, 01 Feb 2021 21:57:02 +0100
+
+wsjtx (2.3.0~rc4+repack-1) unstable; urgency=medium
+
+  * New upstream version 2.3.0~rc4+repack.
+
+ -- Christoph Berg <myon@debian.org>  Tue, 26 Jan 2021 21:33:52 +0100
+
+wsjtx (2.3.0~rc3+repack-2) unstable; urgency=high
+
+  * Allow prerelease package to run longer to allow bullseye users to continue
+    using wsjtx 2.3 until the GA release is ready.
+
+ -- Christoph Berg <myon@debian.org>  Sun, 10 Jan 2021 16:58:05 +0100
+
+wsjtx (2.3.0~rc3+repack-1) unstable; urgency=medium
+
+  * New upstream version 2.3.0~rc3+repack.
+
+ -- Christoph Berg <myon@debian.org>  Tue, 05 Jan 2021 23:02:09 +0100
+
+wsjtx (2.3.0~rc2+repack-1) unstable; urgency=medium
+
+  * New upstream version 2.3.0~rc2+repack.
+  * New B-D libboost-log-dev.
+  * The (inner) upstream tarball dropped the boost embedded code copy, stop
+    removing it.
+  * Drop inactive co-maintainers. Thanks John, Kamal, and Enrico!
+
+ -- Christoph Berg <myon@debian.org>  Mon, 16 Nov 2020 22:37:49 +0100
+
+wsjtx (2.3.0~rc1+repack-1) experimental; urgency=medium
+
+  [ tony mancill ]
+  * Use https URL in debian/watch
+
+  [ Christoph Berg ]
+  * New upstream version 2.3.0~rc1+repack.
+
+ -- Christoph Berg <myon@debian.org>  Mon, 28 Sep 2020 23:28:26 +0200
+
+wsjtx (2.2.2+repack-2) unstable; urgency=medium
+
+  * Team upload.
+  * Add patch to pass --nonet to xsltproc for manpages and add
+    docbook-xml to Build-Depends. (Closes: #964208)
+  * Add patch for spelling typo in the wsjtx manpage.
+
+ -- tony mancill <tmancill@debian.org>  Sun, 05 Jul 2020 13:25:05 -0700
+
+wsjtx (2.2.2+repack-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Document license of qcustomplot-source/.
+
+ -- Christoph Berg <myon@debian.org>  Fri, 26 Jun 2020 11:48:02 +0200
+
+wsjtx (2.2.1+repack-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Document license of contrib/QDarkStyleSheet/.
+
+ -- Christoph Berg <myon@debian.org>  Wed, 10 Jun 2020 13:14:16 +0200
+
+wsjtx (2.2.0+repack-2) unstable; urgency=medium
+
+  * B-D on unversioned libboost-dev. (Closes: #962173)
+
+ -- Christoph Berg <myon@debian.org>  Fri, 05 Jun 2020 12:13:31 +0200
+
+wsjtx (2.2.0+repack-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Symlink docs from wsjtx-main.html so the doc-base file doesn't need
+    updating with each release.
+  * Remove obsolete debian/wsjtx.png.
+  * Build and install upstream manpages instead of cached copies.
+
+ -- Christoph Berg <myon@debian.org>  Tue, 02 Jun 2020 19:45:16 +0200
+
+wsjtx (2.2.0~rc2+repack-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Christoph Berg <myon@debian.org>  Tue, 26 May 2020 17:21:51 +0200
+
+wsjtx (2.2.0~rc1+repack-1) unstable; urgency=medium
+
+  * New upstream rc version.
+  * Remove boost/ directory from source tarball.
+  * rules: Disable verbose debhelper output.
+  * rules: Export buildflags.
+  * DH 13.
+
+ -- Christoph Berg <myon@debian.org>  Tue, 12 May 2020 23:29:52 +0200
+
+wsjtx (2.1.2+repack-2) unstable; urgency=medium
+
+  * Link to system libqcustomplot instead of embedded copy.
+  * Symlink to cty.dat from hamradio-files.
+  * Refactor doc handling and drop useless files.
+
+ -- Christoph Berg <myon@debian.org>  Sun, 29 Dec 2019 11:58:29 +0100
+
+wsjtx (2.1.2+repack-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Christoph Berg ]
+  * Update package description to include FT4.
+  * debian/gitlab-ci.yml: Run reprotest with diffoscope enabled.
+  * Remove obsolete 0001-add-start-script.patch. Spotted by tony mancill,
+    thanks! (Closes: #934446)
+  * Remove obsolete 0002-add-manpage.patch
+
+  [ tony mancill ]
+  * New upstream version 2.1.2
+  * Refresh patches for 2.1.2 upstream release
+  * Replace libqwt-dev build dependency with libqwt-qt5-dev
+  * Update spelling-errors patch
+  * Set "Rules-Requires-Root: no" in debian/control
+
+ -- tony mancill <tmancill@debian.org>  Sat, 30 Nov 2019 17:03:05 -0800
+
+wsjtx (2.1.0+repack-1) unstable; urgency=medium
+
+  * New upstream version.
+  * New build dependency qttools5-dev.
+
+ -- Christoph Berg <myon@debian.org>  Wed, 17 Jul 2019 18:08:25 +0200
+
+wsjtx (2.1.0~rc7+repack-1) experimental; urgency=medium
+
+  * New upstream version.
+
+ -- Christoph Berg <myon@debian.org>  Wed, 05 Jun 2019 14:04:11 +0200
+
+wsjtx (2.1.0~rc5+repack-1) experimental; urgency=medium
+
+  * New upstream version.
+
+ -- Christoph Berg <myon@debian.org>  Mon, 29 Apr 2019 22:13:26 +0200
+
+wsjtx (2.0.1+repack-1) experimental; urgency=medium
+
+  * New upstream version.
+  * Add gitlab-ci.yml.
+
+ -- Christoph Berg <myon@debian.org>  Mon, 11 Mar 2019 14:28:24 +0100
+
+wsjtx (2.0.0+repack-2) unstable; urgency=medium
+
+  * Mark wsjtx as Arch: linux-any (needs libudev-dev).
+  * Mark wsjtx-doc as Multi-Arch: foreign.
+
+ -- Christoph Berg <myon@debian.org>  Sat, 12 Jan 2019 15:41:05 +0100
+
+wsjtx (2.0.0+repack-1) unstable; urgency=medium
+
+  * New upstream version. (Closes: #906899)
+    + PTT device is properly configurable. (Closes: #752367)
+  * Add dependency on libqt5multimedia5-plugins, otherwise no soundcards are
+    visible at all and startup fails. (Closes: #915999)
+  * Mark wsjtx-doc as Multi-Arch: foreign.
+  * Don't drop extra binaries: fcal fmeasure fmtave (frequency calibration
+    utils) msk144code qra64code qra64sim (message compiler examples)
+    wspr_fsk8d (wspr helper binary).
+  * Remove cmake code to check working directory for git or svn changes, fails
+    when building from packaging git.
+  * Move architecture-independent data files to new wsjtx-data package.
+    (The /usr/share/wsjtx/JPLEPH file is 3.7MB in size.)
+  * Local documentation is in /usr/share/doc/wsjtx instead of .../WSJT-X.
+  * Upstream dropped sample wav files (they are now downloadable via a menu
+    option).
+  * Use https:// for homepage.
+  * Add watch file.
+  * Add myself to Uploaders.
+
+ -- Christoph Berg <myon@debian.org>  Tue, 25 Dec 2018 17:59:42 +0100
+
+wsjtx (1.8.0+repack-2) unstable; urgency=medium
+
+  * Fix cloudflare font removal during doc install. (Closes: #914580)
+
+ -- Enrico Rossi <e.rossi@tecnobrain.com>  Wed, 28 Nov 2018 15:37:40 +0100
+
+wsjtx (1.8.0+repack-1) unstable; urgency=low
+
+  [ Enrico Rossi ]
+  * port and adapt upstream patch to fix recent gfortran interop
+    with ISO C.
+  * Removed on-line fonts in Docs.
+  * Update patches with descriptions.
+  * Upgrade debian/copyright to 1.0
+
+  [ Dave Hibberd ]
+  * New Upstream Release (Closes: #752446, #850675, #844861)
+  * Patches refreshed
+    - 0006 updated to strip out things to not build or install
+  * Ship upstream documentation in wsjtx-doc (Closes: #807008)
+  * debian/rules rewritten
+  * dh compatibility brought to 11
+
+  [ Iain Learmonth ]
+  * Tweaks for QT5 compatibility (Closes: #875235)
+
+ -- Enrico Rossi <e.rossi@tecnobrain.com>  Fri, 31 Aug 2018 14:26:06 +0200
+
+wsjtx (1.1.r3496-3.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Use DEB_BUILD_MAINT_OPTIONS, not DEB_BUILD_OPTIONS.
+  * Bump Standards-Version to 3.9.8, no changes needed.
+
+ -- Mattia Rizzolo <mattia@debian.org>  Mon, 03 Oct 2016 10:49:56 +0000
+
+wsjtx (1.1.r3496-3.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Add patch so that the build system can make use of exported buildflags
+  * Bump compat level to 9, so that dh exports dpkg-buildflags in the env by
+    itself.
+  * Use DEB_BUILD_MAINT_OPTIONS=hardening=+all,-pie instead of using
+    hardening-wrapper.  Closes: #836664
+  * Remove a bunch of useless comments from d/rules.
+
+ -- Mattia Rizzolo <mattia@debian.org>  Mon, 26 Sep 2016 15:33:49 +0000
+
+wsjtx (1.1.r3496-3) unstable; urgency=low
+
+  * remove -mno-stack-arg-probe from lib/Makefile.linux CFLAGS
+
+ -- John T. Nogatch <jnogatch@gmail.com>  Mon, 09 Sep 2013 11:18:44 -0700
+
+wsjtx (1.1.r3496-2) unstable; urgency=low
+
+  * revised debian/copyright
+  * restored LICENSE_WHEATLEY.TXT
+
+ -- John T. Nogatch <jnogatch@gmail.com>  Tue, 03 Sep 2013 15:49:45 -0700
+
+wsjtx (1.1.r3496-1) unstable; urgency=low
+
+  * wsjtx 1.1 combines JT-65 & JT-9
+
+ -- John T. Nogatch <jnogatch@gmail.com>  Fri, 19 Jul 2013 20:52:50 -0700
+
+wsjtx (1.0.r3323-2) unstable; urgency=low
+
+  * added *.txt *.dat save/Samples/130418_1742.wav
+  * update jtx script updates those files in ~/.wsjtx/
+  * wider device name boxes in config dialog
+
+ -- John T. Nogatch <jnogatch@gmail.com>  Tue, 04 Jun 2013 08:04:09 -0700
+
+wsjtx (1.0.r3323-1) unstable; urgency=low
+
+  * Initial release (Closes: #710804)
+
+ -- John T. Nogatch <jnogatch@gmail.com>  Mon, 03 Jun 2013 08:49:27 -0700

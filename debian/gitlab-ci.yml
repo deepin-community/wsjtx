@@ -1,0 +1,11 @@
+include:
+  - https://salsa.debian.org/salsa-ci-team/pipeline/raw/master/salsa-ci.yml
+  - https://salsa.debian.org/salsa-ci-team/pipeline/raw/master/pipeline-jobs.yml
+
+variables:
+  SALSA_CI_DISABLE_REPROTEST: 'yes' # build path embedded in Fortan objects
+
+blhc:
+  # preprocessor flags missing on internal cmake calls:
+  # CPPFLAGS missing (-D_FORTIFY_SOURCE=2): /usr/lib/ccache/c++ -dM -E
+  allow_failure: true

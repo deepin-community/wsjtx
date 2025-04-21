@@ -1,0 +1,32 @@
+Description: Install all utility programs
+Bug-Debian: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1024761
+Forwarded: not-needed
+Last-Update: 2024-01-01
+
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -1594,6 +1594,24 @@
+ if(WSJT_BUILD_UTILS)
+ install (TARGETS ft8code jt65code jt9code jt4code msk144code 
+   q65code fst4sim q65sim echosim hash22calc cablog
++  encode77
++  ft4code
++  ft4sim_mult
++  ft8sim
++  jt49sim
++  jt4sim
++  jt65sim
++  ldpcsim240_101
++  ldpcsim240_74
++  msk144sim
++  q65_ftn_test
++  record_time_signal
++  rtty_spec
++  sumsim
++  test_q65
++  test_snr
++  wsprcode
++  wsprsim
+   RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR} COMPONENT runtime
+   BUNDLE DESTINATION ${CMAKE_INSTALL_BINDIR} COMPONENT runtime
+   )
