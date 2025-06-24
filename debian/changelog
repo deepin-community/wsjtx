@@ -1,3 +1,9 @@
+wsjtx (2.7.0+repack-1+rb1) unstable; urgency=medium
+
+  * Strip t64
+
+ -- Cryolitia <cryolitia@deepin.org>  Tue, 18 Feb 2025 16:06:08 +0100
+
 wsjtx (2.7.0+repack-1) unstable; urgency=medium
 
   * New upstream version 2.7.0+repack.
